@@ -55,7 +55,7 @@ describe("Login Module Test", () => {
           `:nth-child(${share_id}) > .row > .col-md-5 > .action-buttons > :nth-child(4) > .btn-issue`
         ).click();
         cy.wait(3000);
-        cy.get("#selectBank").select(item.bank_id);
+        cy.get("#selectBank").select(parseInt(item.bank_id));
         cy.get("#appliedKitta").type(item.kitta);
         cy.get("#crnNumber").type(item.crn_number);
         cy.get("#disclaimer").check();
